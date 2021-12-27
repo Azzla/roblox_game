@@ -1,15 +1,17 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Knit = require(ReplicatedStorage.Packages.Knit)
+local Component = require(ReplicatedStorage.Packages.Component)
 local Trove = require(ReplicatedStorage.Packages.Trove)
 
-local Goal = {}
-Goal.__index = Goal
+local Goal = Component.new({
+    Tag = "Goal"
+})
 
-function Goal.new(instance)
-    local self = setmetatable({}, Goal)
+function Goal:Construct()
+    print("Goal created")
     self._trove = Trove.new()
-    return self
+    self._trove:Add(function()
+        print("Goal destroyed")
+    end)
 end
 
 function Goal:Destroy()
