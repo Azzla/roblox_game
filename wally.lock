@@ -5,7 +5,7 @@ registry = "test"
 [[package]]
 name = "carson/roblox-game"
 version = "0.1.0"
-dependencies = [["Knit", "sleitnick/knit@1.4.0"]]
+dependencies = [["Knit", "sleitnick/knit@1.4.0"], ["Trove", "sleitnick/trove@0.1.3"]]
 
 [[package]]
 name = "evaera/promise"
@@ -30,4 +30,9 @@ dependencies = []
 [[package]]
 name = "sleitnick/signal"
 version = "1.0.1"
+dependencies = []
+
+[[package]]
+name = "sleitnick/trove"
+version = "0.1.3"
 dependencies = []

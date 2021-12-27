@@ -6,6 +6,9 @@ local ArenaService = Knit.CreateService {
     Client = {}
 }
 
+ArenaService.BlueScore = 0
+ArenaService.RedSCore = 0
+
 function ArenaService:StartGame()
     
 end
