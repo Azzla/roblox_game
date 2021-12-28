@@ -8,7 +8,6 @@ local Goal = Component.new({
 })
 
 function Goal:Construct()
-    print("Goal created")
     self._trove = Trove.new()
     self._trove:Add(function()
         print("cleaned up")
