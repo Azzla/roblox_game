@@ -26,7 +26,7 @@ function Arena:SetScore(teamName, score)
 end
 
 function Arena:IncrementScore(teamName)
-    
+    return self.Instance:SetAttribute(teamName .. "Score", self:GetScore(teamName) + 1)
 end
 
 function Arena:ObserveScore(teamName, handler)
